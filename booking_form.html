@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование автомобиля - OScar</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo-link">
+            <div class="logo">OScar: авто для всех</div>
+        </a>
+        <div class="profile">П</div>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">Оформление бронирования</h1>
+        
+        <form id="booking-form" class="booking-form" method="POST" action="/submit-booking"> 
+            
+            <div class="form-group">
+                <label for="car-name">Выбранный автомобиль:</label>
+                <input type="text" id="car-name" name="car-name" value="Не выбран" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="client-name">Ваше имя:</label>
+                <input type="text" id="client-name" name="client-name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone-number">Номер телефона:</label>
+                <input type="tel" id="phone-number" name="phone-number" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="rental-date">Желаемая дата аренды:</label>
+                <input type="date" id="rental-date" name="rental-date" required>
+            </div>
+            
+            <button type="submit" class="submit-button">Забронировать</button>
+        </form>
+    </main>
+    
+    <script>
+        // Получение имени автомобиля из URL-параметра
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const car = params.get('car');
+            if (car) {
+                // Используем decodeURIComponent для корректного отображения имени
+                document.getElementById('car-name').value = decodeURIComponent(car); 
+            }
+        });
+    </script>
+</body>
+</html>

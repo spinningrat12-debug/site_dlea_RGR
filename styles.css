@@ -1,0 +1,205 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Светлый фон */
+    color: #333;
+}
+
+.header {
+    background-color: #38761D; /* Темно-зеленый цвет как на скриншоте */
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.profile {
+    background-color: #70AD47; /* Более светлый зеленый для круга */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-title {
+    text-align: center;
+    color: #38761D;
+    margin-bottom: 40px;
+}
+
+/* --- Стили для index.html --- */
+.car-selection {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.car-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 15px;
+    width: 300px;
+}
+
+.car-image-small {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.details-button {
+    display: block;
+    background-color: #38761D;
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.details-button:hover {
+    background-color: #70AD47;
+}
+
+
+/* --- Стили для страниц деталей (subaru_legacy.html и т.д.) --- */
+.detail-container {
+    padding: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.car-detail-page {
+    display: flex;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-column {
+    flex: 1;
+    padding: 20px;
+}
+
+.car-image-large {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.info-column {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.car-name {
+    color: #38761D;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.specs p, .advantages p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.advantages {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.rent-button {
+    background-color: #38761D;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: auto; /* Прижимает кнопку вниз в info-column */
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.rent-button:hover {
+    background-color: #70AD47;
+}
+
+/* --- Стили для страницы бронирования (booking_form.html) --- */
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #38761D;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Учитывает padding и border в общей ширине */
+    font-size: 1em;
+}
+
+.submit-button {
+    width: 100%;
+    background-color: #38761D;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #70AD47;
+}
