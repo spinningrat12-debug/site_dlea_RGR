@@ -9,7 +9,7 @@ const PORT = 3000;
 
 // --- НАСТРОЙКИ MONGODB ---
 // URL подключения (предполагаем, что MongoDB запущен локально)
-const uri = "mongodb://localhost:27017"; 
+const uri = process.env.MONGO_URI; 
 const client = new MongoClient(uri);
 // Название вашей базы данных (вы можете его изменить)
 const dbName = 'admin'; 
@@ -64,7 +64,7 @@ app.post('/submit-booking', async (req, res) => {
         };
 
         // Вставляем документ в коллекцию 'orders_data'
-        const result = await db.collection('orders_data').insertOne(orderData);
+        const result = await db.collection('users_data').insertOne(orderData);
         console.log(`Новый заказ вставлен с ID: ${result.insertedId}`);
 
         // ПЕРЕНАПРАВЛЕНИЕ: Перекидываем пользователя на главную страницу
@@ -82,4 +82,5 @@ app.post('/submit-booking', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`✅ Сервер запущен! Доступен по адресу: http://localhost:${PORT}`);
     console.log(`Для остановки сервера нажмите Ctrl+C`);
+
 });
